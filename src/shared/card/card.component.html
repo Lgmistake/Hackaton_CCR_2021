@@ -1,0 +1,15 @@
+<div class="card" [ngClass]="{ onModal: isEdit }">
+  <div class="card-header" *ngIf="icon">
+    <i class="material-icons">{{ icon }}</i>
+  </div>
+  <div
+    class="card-title"
+    [style.padding-left]="icon ? '80px' : '0px'"
+  >
+    <h4>{{ titulo }}</h4>
+  </div>
+
+  <div class="card-content" [ngClass]="{ colapse: colapse }">
+    <ng-content></ng-content>
+  </div>
+</div>
