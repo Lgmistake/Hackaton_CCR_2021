@@ -1,0 +1,22 @@
+<mat-card class="filterMenu">
+  <mat-card-content class="naosei mi mi2">
+    <form class="formulario" [formGroup]="formulario">
+      <!-- //Nome Completo -->
+      <mat-form-field  appearance="outline" class="formInput">
+        <mat-label class="corz">O QUE VOCÊ PROCURA?</mat-label>
+        <input
+          matInput
+          placeholder=""
+          formControlName="nome"
+          class="inputColor mi"
+        />
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+  <span class="material-icons">
+
+    search
+    </span>
+</mat-card>
+

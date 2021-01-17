@@ -1,0 +1,73 @@
+
+<section>
+
+  <div class="mensagem">
+      <mat-card class="filterMenu">
+        <div>
+          <img class="pk" src="./assets/img/Forma1.png" alt="F1">
+        </div>
+        <div>
+          <img class="yw" src="./assets/img/Forma2.png" alt="F2">
+        </div>
+        <div>
+          <img class="bvd" src="./assets/img/Forma3.png" alt="F3">
+          <p  class="text">BEM VINDO(A)!</p>
+        </div>
+        <mat-card-content>
+
+          <form class="formulario" [formGroup]="formulario">
+            <!-- Email -->
+            <div class="bts" >
+              <mat-form-field appearance="outline" class="formInput">
+                <mat-label class="corz">NOME</mat-label>
+                <input
+                  required
+                  matInput
+                  placeholder=""
+                  formControlName="email"
+                  class="inputColor corz "
+                />
+                <mat-error>
+                  {{ formulario.get("email")["errors"] | errorKey }}
+                </mat-error>
+              </mat-form-field>
+              <br />
+              <!-- Senha -->
+              <mat-form-field appearance="outline" class="formInput">
+                <mat-label class="corz">SENHA</mat-label>
+                <input
+                  type="password"
+                  required
+                  matInput
+                  placeholder=""
+                  formControlName="senha"
+                  class="inputColor"
+                />
+                <mat-error>
+                  {{ formulario.get("senha")["errors"] | errorKey }}
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="formInput">
+                <mat-label class="corz">CPF/CNPJ</mat-label>
+                <input
+                  required
+                  matInput
+                  placeholder=""
+                  formControlName="email"
+                  class="inputColor corz "
+                />
+                <mat-error>
+                  {{ formulario.get("email")["errors"] | errorKey }}
+                </mat-error>
+              </mat-form-field>
+              <br />
+              <!-- Senha -->
+            </div>
+            <button class="cd" mat-raised-button (click)="register()">
+              Registrar
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>

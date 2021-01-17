@@ -1,0 +1,167 @@
+<div>
+  <mat-card class="filterMenu">
+    <mat-card-header>
+      <mat-card-title>Dados do contrato</mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        Entre com os dados do contrato a ser criado.
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="formulario" [formGroup]="formulario">
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Número Contrato</mat-label>
+          <input
+            required
+            matInput
+            [readonly]="document?.id"
+            placeholder="Número Contrato"
+            formControlName="contractNumber"
+          />
+
+          <mat-error>
+            {{ formulario.get("contractNumber")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Descrição</mat-label>
+          <input
+            required
+            [readonly]="document?.id"
+            matInput
+            placeholder="Descrição"
+            formControlName="description"
+          />
+          <mat-error>
+            {{ formulario.get("description")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Título</mat-label>
+          <input
+            matInput
+            required
+            [readonly]="document?.id"
+            placeholder="Título"
+            formControlName="title"
+          />
+          <mat-error>
+            {{ formulario.get("title")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Versão do Documento</mat-label>
+          <input
+            required
+            matInput
+            [readonly]="document?.id"
+            type="number"
+            placeholder="Versão do Documento"
+            formControlName="version"
+          />
+          <mat-error>
+            {{ formulario.get("version")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Inicio da Vigência</mat-label>
+          <input
+            matInput
+            [readonly]="document?.id"
+            required
+            [max]="formulario.value.endDate"
+            [matDatepicker]="beginDate"
+            appMaskDate
+            placeholder="DD/MM/AAAA"
+            formControlName="beginDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="beginDate"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #beginDate></mat-datepicker>
+          <mat-error>
+            {{ formulario.get("beginDate")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Fim da Vigência</mat-label>
+          <input
+            matInput
+            [readonly]="document?.id"
+            required
+            [min]="formulario.value.beginDate"
+            [matDatepicker]="endDate"
+            appMaskDate
+            placeholder="DD/MM/AAAA"
+            formControlName="endDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="endDate"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #endDate></mat-datepicker>
+          <mat-error>
+            {{ formulario.get("endDate")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formInput textAreaInput">
+          <mat-label>Comentários Gerais</mat-label>
+          <textarea
+            required
+            [readonly]="document?.id"
+            cdkAutosizeMinRows="5"
+            formControlName="comments"
+            matInput
+            placeholder="Comentários Gerais"
+            style="overflow: hidden;"
+          ></textarea>
+          <mat-error>
+            {{ formulario.get("comments")["errors"] | errorKey }}
+          </mat-error>
+        </mat-form-field>
+        <div class="formInput">
+          <label>Deseja tornar este documento publico ? </label>
+          <mat-radio-group
+            formControlName="publico"
+            aria-label="Select an option"
+          >
+            <mat-radio-button value="true">Sim</mat-radio-button>
+            <mat-radio-button value="false">Não</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        class="mb-right"
+        mat-raised-button
+        [disabled]="document?.id"
+        (click)="saveContract()"
+      >
+        Salvar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <!-- <div [hidden]="!document?.id"> -->
+  <mat-card-title>Hierarquia do Contrato </mat-card-title>
+  <!-- <button
+    class="extended-fab-button"
+    mat-fab
+    [hidden]="document === null || document === undefined || document?.id"
+    [disabled]="!document?.id"
+    (click)="addBlock(null)"
+  >
+    <mat-icon>add</mat-icon>
+    <span class="extended-fab-button__text">Novo Bloco</span>
+  </button> -->
+  <div *ngIf="document?.id">
+    <app-hieraquia-contrato [document]="document" [edit]="false"></app-hieraquia-contrato>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+
+<section>
+
+  <div class="mensagem">
+      <mat-card class="filterMenu">
+        <div>
+          <img class="pk" src="./assets/img/Forma1.png" alt="F1">
+        </div>
+        <div>
+          <img class="yw" src="./assets/img/Forma2.png" alt="F2">
+        </div>
+        <div>
+          <img class="bvd" src="./assets/img/Forma3.png" alt="F3">
+          <p  class="text">BEM VINDO(A) DE VOLTA</p>
+        </div>
+        <mat-card-content>
+
+          <form class="formulario" [formGroup]="">
+            <!-- Email -->
+            <div class="bts" >
+              <mat-form-field appearance="outline" class="formInput">
+                <mat-label class="corz">CNPJ</mat-label>
+                <input
+                  required
+                  matInput
+                  placeholder=""
+                  formControlName="email"
+                  class="inputColor corz "
+                />
+              </mat-form-field>
+              <br />
+              <!-- Senha -->
+              <mat-form-field appearance="outline" class="formInput">
+                <mat-label class="corz">SENHA</mat-label>
+                <input
+                  type="password"
+                  required
+                  matInput
+                  placeholder=""
+                  formControlName="senha"
+                  class="inputColor"
+                />
+              </mat-form-field>
+            </div>
+            <button class="cd" mat-raised-button (click)="addItem()">
+              Entrar
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>

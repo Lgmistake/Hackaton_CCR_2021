@@ -1,0 +1,43 @@
+@import './../../../assets/scss/variables';
+
+.filterMenu {
+  margin-bottom: 5%;
+  .findMyContract {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+  }
+}
+
+.findContractButton {
+  background-color: transparent;
+  min-width: 150px;
+  max-width: 300px;
+  text-transform: uppercase !important;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.searchBar {
+  width: 98%;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 0 1%;
+  color: orange;
+  font-size: 1em;
+  margin-bottom: 2%;
+}
+.mat-form-field-suffix {
+  font-size: 3em !important;
+}
+
+.mb-right {
+  width: 10%;
+  min-width: 100px;
+  margin-right: 10px;
+  background-color: $primary_color;
+  color: white;
+}

@@ -1,0 +1,50 @@
+@import "./../assets/scss/variables";
+
+
+.content {
+  flex: 1 1 auto;
+  order: 0;
+  align-self: auto;
+  // -webkit-flex: 1 1 0;
+  // height: 0;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left:5%;
+  padding-right:5%;
+  font-family: Open Sans !important;
+  background-color: $background-color;
+}
+.contentLogin {
+  flex: 1 1 auto;
+  order: 0;
+  align-self: auto;
+  font-family: Open Sans !important;
+  -webkit-flex: 1 1 auto;
+  height: 0;
+}
+
+.loader {
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 10000 !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed !important;
+  background-color: rgba(0,0,0,0.9) !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  transition: visibility 0s, opacity 0.4s linear !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: wait !important;
+}
+// main {
+//   order: 0;
+//     flex: 1 1 auto;
+//     align-self: auto;
+//     display: flex;
+// }
+app-login {
+  width: inherit !important;
+}

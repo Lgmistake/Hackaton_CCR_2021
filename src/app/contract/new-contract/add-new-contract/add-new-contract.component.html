@@ -1,0 +1,75 @@
+<h1 mat-dialog-title>Adicionar novo bloco</h1>
+
+<div mat-dialog-content>
+  <form class="formulario" [formGroup]="formulario">
+    <mat-form-field appearance="outline" class="formInput">
+      <mat-label>Número do bloco</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Número do bloco"
+        formControlName="order"
+      />
+      <mat-error>
+        {{ formulario.get('order')['errors'] | errorKey }}
+      </mat-error>
+    </mat-form-field>
+
+    
+    <mat-form-field appearance="outline" class="formInput">
+      <mat-label>Titulo do bloco</mat-label>
+      <input
+      matInput
+      required
+      placeholder="Titulo do bloco"
+      formControlName="title"
+      />
+      <mat-error>
+        {{ formulario.get('title')['errors'] | errorKey }}
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="formInput">
+      <mat-label>Tipo de bloco</mat-label>
+      <mat-select required formControlName="blockType">
+        <mat-option *ngFor="let blockType of blockTypes" [value]="blockType">
+          {{ blockType.description }}
+        </mat-option>
+      </mat-select>
+      <mat-error>
+        {{ formulario.get('blockType')['errors'] | errorKey }}
+      </mat-error>
+    </mat-form-field>
+    <div class="description">
+      <mat-label>Descrição</mat-label>
+      <quill-editor formControlName="description"></quill-editor>
+    </div>
+    <div class="formInput">
+      <label>Aprovado? </label>
+      <mat-radio-group formControlName="approval" aria-label="Select an option">
+        <mat-radio-button value="true">Sim</mat-radio-button>
+        <mat-radio-button value="false">Não</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </form>
+</div>
+  <!-- <input
+    matInput
+    required
+    placeholder="Descrição"
+    formControlName="description"
+  /> -->
+<div mat-dialog-actions>
+  <button
+    class="mb-right bt-cancel"
+    mat-raised-button
+    (click)="close()"
+    type="button"
+    color="warn"
+  >
+    Cancelar
+  </button>
+  <button class="mb-right" mat-raised-button (click)="addBlock()">
+    {{ data ? 'Atualizar' : 'Adicionar' }}
+  </button>
+</div>

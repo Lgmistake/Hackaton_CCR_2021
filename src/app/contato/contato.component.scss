@@ -1,0 +1,91 @@
+.inputColor {
+  background-color: white;
+  size: 1.2em;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  align-items: center;
+  // padding: 10px;
+}
+.formulario {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: row;
+}
+.flex {
+  display: flex;
+}
+.formInput {
+  font-size: 1.2em;
+  padding-left: 2%;
+  // width: 40%;
+  color: black;
+  width: 19vw;
+}
+.cd {
+  background-color: #29285d;
+  color: #fff;
+  height: 4.5em;
+  width: 11em;
+  font-size: 100%;
+  font-weight: 500;
+  bottom: 30%;
+  position: absolute;
+  left: 73%;
+}
+.bvd {
+  margin-left: -30%;
+  margin-bottom: 7%;
+  width: 26%;
+  position: relative;
+  top: -14%;
+  left: 41%;
+}
+.yw {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+.pk {
+  position: absolute;
+  bottom: 49%;
+  width: 17%;
+  left: -2%;
+  top: 0%;
+}
+.bts {
+  position: absolute;
+  top: 36%;
+  left: 51%;
+}
+.text {
+    color: white;
+    position: absolute;
+    top: 22%;
+    left: 18%;
+    font-size: 40pt;
+    width: 15%;
+    font-weight: bold;
+}
+.corz{
+  color: #29285d;
+  font-size: 20pt;
+}
+@media screen and (max-width: 1981px) {
+  .text {
+    color: white;
+    position: absolute;
+    top: 26%;
+    left: 18%;
+    font-size: 29pt;
+    width: 15%;
+    font-weight: bold;
+}
+.bts {
+  position: absolute;
+  top: 26%;
+  left: 51%;
+}
+}

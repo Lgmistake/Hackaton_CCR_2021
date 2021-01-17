@@ -1,0 +1,35 @@
+<div class="menuContract">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <button mat-flat-button class="menuContractButton">
+          <img src="./assets/img/menu-interna-meus-contratos-on.png" width="100%"/>
+        </button>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-my-contract></app-my-contract>
+      </ng-template>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <button mat-flat-button class="menuContractButton">
+          <img src="./assets/img/menu-interna-novo-contrato-on.png" width="100%"/>
+        </button>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-new-contract></app-new-contract>
+      </ng-template>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <button mat-flat-button class="menuContractButton">
+          <img src="./assets/img/menu-interna-consultar-contratos-on.png" width="100%" />
+        </button>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-find-contract></app-find-contract>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,87 @@
+.cadastro {
+    display: flex;
+    height: -90px;
+    min-height: 180px;
+    max-height: 80px;
+    margin-left: 3%;
+    background-color: #d82a4e;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font: normal;
+    font-size: 300%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    width: 63%;
+    min-width: 300px;
+  }
+  .botaoGrande {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -90px;
+  }
+  .sct {
+    display: block;
+    text-align: justify;
+    max-width: 40%;
+    margin-top: 4%;
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    margin-right: 15%;
+    margin-left: 28%;
+    line-height: 1;
+  }
+  
+  .idp {
+    font-size: 170%;
+    font-weight: 800;
+    color: #474747;
+  }
+  .textos {
+    font-size: 14.1px;
+    color: #878787;
+    line-height: 2.2;
+    font-weight: 400;
+  }
+  .expandindo {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    color: #d82a4e;
+    font-size: 1.3em;
+    font-weight: 1000;
+  }
+  .row {
+    display: flex;
+    margin-left: 35em;
+    margin-right: 28em;
+    margin-bottom: 5%;
+  }
+  .img3 {
+    margin-left: 2%;
+    margin-right: 8%;
+  }
+  .corsub {
+    font-size: 14.1px;
+    color: #878787;
+    line-height: 2;
+    font-weight: 400;
+    max-width: 70%;
+  }
+  .img1 {
+    margin-left: 8%;
+  }
+  .subtt {
+    font-style: bold;
+    font-size: 14.5px;
+    color: #636262;
+    line-height: 2.2;
+    font-weight: 1000;
+
+
+  }
+
+  
+  

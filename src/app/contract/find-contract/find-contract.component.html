@@ -1,0 +1,140 @@
+<div>
+  <mat-card class="filterMenu">
+    <mat-card-header>
+      <mat-card-title>Contratos</mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        Lista de contratos publicos.
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="findMyContract" [formGroup]="formulario">
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Número Contrato</mat-label>
+          <input
+            matInput
+            placeholder="Número do Contrato"
+            formControlName="contractNumber"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Título</mat-label>
+          <input matInput placeholder="Título" formControlName="title" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="formInput">
+          <mat-label>Descrição</mat-label>
+          <input
+            matInput
+            placeholder="Descrição"
+            formControlName="description"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        class="mb-right"
+        mat-raised-button
+        id="find"
+        (click)="searchDocuments()"
+      >
+        Consultar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <table mat-table #table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="contractNumber">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          class="tituloTable"
+        >
+          NÚMERO DO CONTRATO
+        </th>
+        <td mat-cell class="valueTable" *matCellDef="let row">
+          {{ row.contractNumber }}
+        </td>
+      </ng-container>
+
+      <!-- Progress Column -->
+      <ng-container matColumnDef="title">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          class="tituloTable"
+        >
+          TÍTULO
+        </th>
+        <td mat-cell class="valueTable" *matCellDef="let row">
+          {{ row.title }}
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="description">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          class="tituloTable"
+        >
+          DESCRIÇÃO
+        </th>
+        <td mat-cell class="valueTable" *matCellDef="let row">
+          {{ row.description | slice: 0:100 }}...
+        </td>
+      </ng-container>
+
+      <!-- Color Column -->
+      <!-- <ng-container matColumnDef="creationDate">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            class="tituloTable"
+          >
+            DATA
+          </th>
+          <td mat-cell class="valueTable" *matCellDef="let row">
+            {{ row.creationDate | date: 'dd/MM/yyyy' }}
+          </td>
+        </ng-container> -->
+
+      <!-- Color Column -->
+      <ng-container matColumnDef="acao">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          class="tituloTable"
+        >
+          AÇÃO
+        </th>
+        <td mat-cell class="valueTable" *matCellDef="let row">
+          <button
+            mat-icon-button
+            aria-label="Editar"
+            (click)="editContract(row)"
+          >
+            <i class="material-icons-outlined">edit</i>
+          </button>
+          <button
+            mat-icon-button
+            aria-label="Deletar"
+            (click)="deleteContract(row)"
+          >
+            <i class="material-icons-outlined">delete</i>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="paginatorOptions"></mat-paginator>
+  </mat-card>
+</div>

@@ -1,0 +1,143 @@
+@import './../../../../assets/scss/variables';
+.mat-table {
+  width: 100%;
+  .mat-sort-header-container {
+    color: $primary_color;
+    text-transform: uppercase !important;
+    .mat-sort-header-button {
+      color: $primary_color;
+      text-transform: uppercase !important;
+    }
+  }
+}
+.mat-sort-header-container {
+  color: $primary_color;
+  text-transform: uppercase !important;
+  .mat-sort-header-button {
+    color: $primary_color;
+    text-transform: uppercase !important;
+  }
+}
+.mat-sort-header-button {
+  color: $primary_color;
+  text-transform: uppercase !important;
+}
+.tituloTable {
+  color: $primary_color;
+  text-transform: uppercase !important;
+}
+.valueTable {
+  color: #989898;
+}
+.mat-card-title {
+  color: $primary_color;
+  font-family: Open Sans;
+  margin: 0;
+  font-size: 1.3em;
+}
+.mat-card-subtitle {
+  margin: 0;
+  font-size: 0.8em;
+  color: #989898;
+}
+.mat-card-content {
+  margin: 0 16px;
+}
+.mat-column-data {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mat-column-setor {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mat-column-acao {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mat-column-descricao {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mat-column-titulo {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.mat-column-numContrato {
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.filterMenu {
+  margin-bottom: 5%;
+  .formulario {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+  }
+}
+.mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  .findContractButton {
+    background-color: transparent;
+    min-width: 150px;
+    max-width: 300px;
+    text-transform: uppercase !important;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+}
+.searchBar {
+  width: 98%;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 0 1%;
+  color: orange;
+  font-size: 1em;
+  margin-bottom: 2%;
+}
+.mat-form-field-suffix {
+  font-size: 3em !important;
+}
+.mb-right {
+  width: 10%;
+  margin-right: 10px;
+  background-color: $primary_color;
+  color: white;
+}
+.bt-cancel{
+  background-color: $cancel-color;
+}
+.ico-button {
+  margin-right: 10px;
+  background-color: $primary_color;
+  color: white;
+}
+.formulario{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+    .formInput{
+      min-width: 150px;
+      width: 30%;
+    }
+}
+.description{
+  width: 100%;
+  margin: 2% 0;
+}

@@ -1,0 +1,41 @@
+  <button
+    class="{{document !== null || document !== undefined ? 'extended-fab-button':'extended-fab-button-hieraquia'}}"
+    mat-fab
+    [hidden]="document === null || document === undefined || document.id === null"
+    [disabled]="!document?.id"
+    (click)="addBlock(null)"
+  >
+    <mat-icon>add</mat-icon>
+    <span class="extended-fab-button__text">Novo Bloco</span>
+  </button>
+<div cdkDropList class="row" [hidden]="blocks !== null && blocks.length === 0">
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <ng-template matStepperIcon="edit">
+      <mat-icon>done</mat-icon>
+    </ng-template>
+    <mat-step *ngFor="let data of blocks">
+      <ng-template matStepLabel>
+        <div class="stepperTitle">Título: {{ data.title }}</div>
+        <div class="stepperButtons" *ngIf="!edit">
+          <button mat-icon-button class="ico-button" (click)="editBlock(data)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="ico-button"
+            (click)="deleteBlock(data)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button class="ico-button" (click)="addBlock(data)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </ng-template>
+      <div [innerHtml]="data.description"></div>
+      <div *ngIf="data?.blocks">
+        <app-hieraquia-contrato [blocks]="data.blocks"></app-hieraquia-contrato>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

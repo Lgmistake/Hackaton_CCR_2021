@@ -1,0 +1,46 @@
+@import './../../assets/scss/variables';
+.menuContract{
+    font-family: Open Sans;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .menuContractButton{
+        background-color:transparent;
+        max-width: 400px;
+        width: 95%;
+        text-transform: uppercase !important;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    .iconContratos{
+        font-size: 1.8em;
+        margin-right:10% ;
+    }
+}
+.contract{
+    padding-top:5%;
+}
+::ng-deep.mat-tab-label{
+    height: 100% !important;
+    padding: 0 !important;
+//    margin: 0 2%;
+}
+::ng-deep.mat-tab-labels{
+    justify-content: space-between;
+}
+::ng-deep.mat-tab-group{
+    width: 100%;
+}
+::ng-deep.mat-tab-body-wrapper{
+    padding: 5% 0;
+}
+::ng-deep.mat-ink-bar{
+    background-color: none !important;
+}
+::ng-deep.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: transparent !important;
+}
+::ng-deep.mat-tab-header{
+    border: none !important;
+}
